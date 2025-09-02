@@ -1,61 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Prince Gabica — Portfolio</title>
-  <meta name="description" content="Portfolio of Prince Gabica — BSIT student, developer and entrepreneur based in Siargao, PH." />
-  <meta name="theme-color" content="#0ea5e9" />
-  <meta property="og:title" content="Prince Gabica — Portfolio" />
-  <meta property="og:description" content="Projects, skills, and contact for collaborations." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="" />
-  <link rel="icon" href="" />
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
   <style>
-    :root{
-      --bg: #0b1220;           /* base dark */
-      --panel: #0f172a;        /* surface */
-      --text: #e5e7eb;         /* text */
-      --muted: #9ca3af;        /* secondary */
-      --brand: #0ea5e9;        /* sky-500 */
-      --brand-2:#22d3ee;       /* cyan-400 */
-      --ring: #38bdf8;
-      --ok: #22c55e;
-      --warn: #f59e0b;
-      --danger: #ef4444;
-      --shadow: 0 10px 30px rgba(2,8,23,.25);
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
     }
-    [data-theme="light"]{
-      --bg:#f8fafc; --panel:#ffffff; --text:#0f172a; --muted:#475569; --shadow:0 10px 30px rgba(2,8,23,.08);
+    header {
+      background: #0077cc;
+      color: white;
+      padding: 20px;
+      text-align: center;
     }
-
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
-      background: radial-gradient(1200px 600px at 80% -10%, rgba(34,211,238,.15), transparent),
-                  radial-gradient(1000px 500px at 10% -20%, rgba(14,165,233,.15), transparent),
-                  var(--bg);
-      color:var(--text); line-height:1.6;
-      scroll-behavior:smooth;
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
     }
-    a{color:inherit; text-decoration:none}
-    img{max-width:100%; display:block}
+    section {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #0077cc;
+      margin-bottom: 20px;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0077cc;
+      color: white;
+      margin-top: 40px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      background: #0077cc;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
 
-    /* Layout */
-    .container{width:min(1100px, 92%); margin-inline:auto}
-    header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(150%) blur(8px); background:color-mix(in srgb, var(--panel) 80%, transparent); border-bottom:1px solid color-mix(in srgb, var(--text) 10%, transparent)}
-    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
-    .brand{display:flex; gap:10px; align-items:center}
-    .logo{width:36px; height:36px; border-radius:12px; background:linear-gradient(135deg,var(--brand),var(--brand-2)); box-shadow:var(--shadow)}
-    .brand b{letter-spacing:.3px}
+  <header>
+    <h1>Prince Gabica</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    nav ul{display:flex; gap:18px; list-style:none; padding:0; margin:0}
-    .nav a{opacity:.85}
-    .nav a:hover{opacity:1}
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I am Prince Gabica, a BSIT student and aspiring developer. I enjoy building websites, apps, and systems that solve real problems.</p>
+  </section>
 
-    .actions{display:flex; gap:10px; align-items:center}
-    .btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:10px 14px; border-radius:999px; border:1px solid color-mix(in srgb, var(--text) 14%, transparent); background:color-mix(in srgb, var(--panel) 70%, transparent); transition:.2s; box-shadow: none}
-    .btn:hover{transform:translateY(-1px); box-shadow:var(--shadow)}
-    .btn.primary{background:li
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Tourism Management System</h3>
+        <p>A desktop application using Java and XAMPP for Sta. Cruz, Davao del Sur.</p>
+      </div>
+      <div class="card">
+        <h3>Barangay Task Tracker</h3>
+        <p>A simple web system that assigns and monitors barangay official tasks.</p>
+      </div>
+      <div class="card">
+        <h3>Suka Tuba Pinakurat Website</h3>
+        <p>An online storefront for a local vinegar brand.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Java, JavaScript, Python, SQL</li>
+      <li>Web & Mobile App Development</li>
+      <li>Git & SourceTree</li>
+      <li>Database Management (MySQL, Firebase)</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Prince Gabica. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
