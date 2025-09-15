@@ -1,0 +1,111 @@
+/* Reset + base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Animated background */
+.animated-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(-45deg, #ff4b2b, #1e90ff, #23d5ab, #e73c7e);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  z-index: -1;
+  opacity: 0.15;
+}
+@keyframes gradientBG {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+}
+nav .logo {
+  font-size: 28px;
+  font-weight: 800;
+  color: #fff;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 300;
+  transition: color 0.3s;
+}
+nav ul li a:hover,
+nav ul li a.active {
+  color: #23d5ab;
+}
+
+/* Education layout */
+.education {
+  padding: 150px 80px 60px;
+}
+.education-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+.education-image img {
+  width: 380px;
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.4));
+}
+.education-text {
+  max-width: 600px;
+}
+.education-text h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+.education-text h2 span {
+  color: #23d5ab;
+}
+
+/* Each education item */
+.edu-item {
+  margin-bottom: 25px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 20px 25px;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+.edu-item:hover {
+  transform: translateY(-6px);
+}
+.edu-item h3 {
+  font-size: 22px;
+  color: #23d5ab;
+  margin-bottom: 5px;
+}
+.edu-item p {
+  font-size: 14px;
+  color: #ddd;
+  line-height: 1.6;
+}
